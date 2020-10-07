@@ -17,19 +17,19 @@ public class PublisherServiceImpl implements PublisherService{
 	@Override
 	public Publisher createOrUpdatePublisher(Publisher publisher) {
 		// TODO Auto-generated method stub
-		return null;
+		return publisherDao.createOrUpdatePublisher(publisher);
 	}
 
 	@Override
 	public Optional<Publisher> getPublisherById(Long publisherId) {
 		// TODO Auto-generated method stub
-		return null;
+		return publisherDao.getPublisherById(publisherId);
 	}
 
 	@Override
-	public void deleteAuthor(Publisher publisher) {
+	public void deletePublisher(Publisher publisher) {
 		// TODO Auto-generated method stub
-		
+		publisherDao.deleteAuthor(publisher);
 	}
 
 	@Override

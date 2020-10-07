@@ -18,7 +18,7 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public User createOrUpdateUser(User user) {
 		// TODO Auto-generated method stub
-		return null;
+		return userRepo.save(user);
 	}
 
 	@Override

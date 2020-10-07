@@ -16,19 +16,19 @@ private AuthorDao authorDao;
 	@Override
 	public Author createOrUpdateAuthor(Author author) {
 		// TODO Auto-generated method stub
-		return null;
+		return authorDao.createOrUpdateAuthor(author);
 	}
 
 	@Override
 	public Optional<Author> getAuthorById(Long authorId) {
 		// TODO Auto-generated method stub
-		return null;
+		return authorDao.getAuthorById(authorId);
 	}
 
 	@Override
 	public void deleteAuthor(Author author) {
 		// TODO Auto-generated method stub
-		
+		authorDao.deleteAuthor(author);
 	}
 
 	@Override

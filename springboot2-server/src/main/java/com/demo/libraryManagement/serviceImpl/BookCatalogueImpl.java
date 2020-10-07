@@ -16,19 +16,19 @@ public class BookCatalogueImpl implements BookCatalogueService{
 	@Override
 	public Book createOrUpdateBook(Book book) {
 		// TODO Auto-generated method stub
-		return null;
+		return bookCatalogueDao.createOrUpdateBook(book);
 	}
 
 	@Override
 	public Optional<Book> getBookById(Long bookId) {
 		// TODO Auto-generated method stub
-		return null;
+		return bookCatalogueDao.getBookById(bookId);
 	}
 
 	@Override
 	public void deleteBook(Book user) {
 		// TODO Auto-generated method stub
-		
+		bookCatalogueDao.deleteBook(user);
 	}
 
 	@Override

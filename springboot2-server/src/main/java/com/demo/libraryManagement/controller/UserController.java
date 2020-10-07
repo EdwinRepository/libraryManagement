@@ -30,10 +30,10 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	/*
-	 * @GetMapping("/users") public List<User> getAllUsers() { return
-	 * userService.getAllUsers(); }
-	 */
+	@GetMapping("/users")
+	public List<User> getAllUsers() {
+		return userService.getAllUsers();
+	}
 
 	@PostMapping("/users")
 	public User createUser(@Valid @RequestBody User user) {
@@ -41,8 +41,7 @@ public class UserController {
 	}
 
 	@GetMapping("/users/{id}")
-	public ResponseEntity<User> getUserById(@PathVariable(value = "id") Long userId)
-			throws ResourceNotFoundException {
+	public ResponseEntity<User> getUserById(@PathVariable(value = "id") Long userId) throws ResourceNotFoundException {
 		User user = userService.getUserById(userId)
 				.orElseThrow(() -> new ResourceNotFoundException("User not found for this id :: " + userId));
 		return ResponseEntity.ok().body(user);

@@ -16,19 +16,19 @@ public class PublisherDaoImpl implements PublisherDao{
 	@Override
 	public Publisher createOrUpdatePublisher(Publisher publisher) {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.save(publisher);
 	}
 
 	@Override
 	public Optional<Publisher> getPublisherById(Long publisherId) {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findById(publisherId);
 	}
 
 	@Override
 	public void deleteAuthor(Publisher publisher) {
 		// TODO Auto-generated method stub
-		
+		repo.delete(publisher);
 	}
 
 	@Override

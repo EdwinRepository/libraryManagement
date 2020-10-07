@@ -18,19 +18,19 @@ public class AuthorDaoImpl implements AuthorDao {
 	@Override
 	public Author createOrUpdateAuthor(Author author) {
 		// TODO Auto-generated method stub
-		return null;
+		return authorRepository.save(author);
 	}
 
 	@Override
 	public Optional<Author> getAuthorById(Long authorId) {
 		// TODO Auto-generated method stub
-		return null;
+		return authorRepository.findById(authorId);
 	}
 
 	@Override
 	public void deleteAuthor(Author author) {
 		// TODO Auto-generated method stub
-
+		authorRepository.delete(author);
 	}
 
 	@Override

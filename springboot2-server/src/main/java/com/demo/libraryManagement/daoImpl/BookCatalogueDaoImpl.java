@@ -17,19 +17,19 @@ public class BookCatalogueDaoImpl implements BookCatalogueDao{
 	@Override
 	public Book createOrUpdateBook(Book book) {
 		// TODO Auto-generated method stub
-		return null;
+		return bookCatalogueRepository.save(book);
 	}
 
 	@Override
 	public Optional<Book> getBookById(Long bookId) {
 		// TODO Auto-generated method stub
-		return null;
+		return bookCatalogueRepository.findById(bookId);
 	}
 
 	@Override
 	public void deleteBook(Book user) {
 		// TODO Auto-generated method stub
-		
+		bookCatalogueRepository.delete(user);
 	}
 
 	@Override

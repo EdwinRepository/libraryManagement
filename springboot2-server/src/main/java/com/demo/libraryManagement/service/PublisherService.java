@@ -10,7 +10,7 @@ public interface PublisherService {
 
 	public Optional<Publisher> getPublisherById(Long publisherId);
 
-	public void deleteAuthor(Publisher publisher);
+	public void deletePublisher(Publisher publisher);
 
 	public List<Publisher> getAllPublisher();
 }
