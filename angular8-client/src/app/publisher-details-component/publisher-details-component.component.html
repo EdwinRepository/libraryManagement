@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Publisher Details List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>UserName</th>
+          <th>Address</th>
+          
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let publisher of publishers | async">
+          <td>{{publisher.name}}</td>
+          <td>{{publisher.address}}</td>
+          
+          <td><button (click)="toadd()" class="btn btn-info" >add</button>
+              <button (click)="toupdate(publisher.publisherId)" class="btn btn-info" style="margin-left: 10px">Update</button>              
+              <button (click)="todelete(publisher.publisherId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

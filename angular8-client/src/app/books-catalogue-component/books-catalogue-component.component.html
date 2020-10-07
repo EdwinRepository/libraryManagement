@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Book Catalogue List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Price</th>
+          <th>AuthorName</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books | async">
+          <td>{{book.title}}</td>
+          <td>{{book.bookPrice}}</td>
+          <td>{{book.authorName}}</td>
+          <td><button (click)="toadd()" class="btn btn-info" >add</button>
+              <button (click)="toupdate(book.bookId)" class="btn btn-info" style="margin-left: 10px">Update</button>              
+              <button (click)="todelete(book.bookId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

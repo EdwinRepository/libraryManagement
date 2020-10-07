@@ -1,0 +1,21 @@
+<h3>Update Book Details</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Book Title</label>
+      <input type="text" class="form-control" id="title" required [(ngModel)]="book.title" name="title">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Book Price</label>
+      <input type="text" class="form-control" id="bookPrice" required [(ngModel)]="book.bookPrice" name="bookPrice">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Author Name</label>
+      <input type="text" class="form-control" id="authorName" required [(ngModel)]="book.authorName" name="authorName">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

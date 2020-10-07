@@ -1,0 +1,17 @@
+<h3>Add Author</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    
+
+   
+    <div class="form-group">
+      <label for="name">authorName</label>
+      <input type="text" class="form-control" name ="name" id="name"  #name="ngModel" [(ngModel)]="author.name" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" required>
+      <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+        <div *ngIf="name.errors.required">authorName is required</div>
+    </div>
+</div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
